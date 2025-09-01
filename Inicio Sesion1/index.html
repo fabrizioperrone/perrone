@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 🛡️ Perrone - Login 🛡️ </title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11"> <!-- Include SweetAlert library -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        
+    <style>
+        .submit-button {
+            border: 0;
+            background: #631a10;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #8b2113;
+            padding: 14px 40px;
+            outline: none;
+            color: rgb(255, 0, 0);
+            border-radius: 24px;
+            transition: 0.25s;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background: none;
+        }
+    </style>
+
+    <script>
+        function validarFormulario() {
+            var usuario = document.getElementById("usuario").value;
+            var contraseña = document.getElementById("contraseña").value;
+
+            if (usuario === "perrone" && contraseña === "1234") {
+                window.location.href = "../Inicio Sesion2/index.html";
+            } else {
+                showLoginError(); // Call the custom error function
+            }
+        }
+
+        function showLoginError() {
+            Swal.fire({
+                icon: 'error',
+                title: '<span style="color: white;">ERROR</span>',
+                html: '<span style="color: white;">Nombre de usuario o contraseña incorrecto/s.</span>',
+                background: '#212224ff',
+                showCloseButton: true,
+                closeButtonHtml: '<span style="color: white;">&times;</span>',
+                confirmButtonText: '<span style="color: white;">Reintentar</span>',
+                customClass: {
+                    popup: 'text-white'
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <form action="javascript:void(0);" class="form-box animated fadeInUp">
+        <h1 class="form-title"> ​𝓅𝑒𝓇𝓇𝑜𝓃𝑒 </h1> 
+        <input type="text" id="usuario" placeholder="Usuario" autofocus>
+        <input type="password" id="contraseña" placeholder="Contraseña">
+        <button type="button" onclick="validarFormulario()" class="submit-button">
+            Iniciar Sesión
+        </button>
+    </form>
+</body>
+
+</html>
