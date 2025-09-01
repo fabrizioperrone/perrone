@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 🛡️ Perrone - Cámara 🛡️ </title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: #3a0701;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* pantalla completa */
+        }
+
+        .camera-button {
+            border: 0;
+            background: #631a10;
+            display: block;
+            text-align: center;
+            border: 2px solid #8b2113;
+            padding: 80px; /* tamaño del círculo */
+            color: white;
+            border-radius: 50%;
+            transition: 0.25s;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .camera-button:hover {
+            background: #8b2113;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="camera-button" onclick="window.location.href='http://127.0.0.1/'">
+        Cámara
+    </button>
+</body>
+
+</html>
